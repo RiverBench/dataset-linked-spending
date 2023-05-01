@@ -15,44 +15,47 @@
 :dataset
     a rb:Dataset, dcat:Dataset ;
     dcterms:conformsTo <https://w3id.org/riverbench/schema/metadata> ;
-    dcterms:identifier "[YOUR DATASET ID (only a-z, 0-9, -)]" ;
+    dcterms:identifier "linked-spending" ;
 
-    dcterms:title "[HUMAN-READABLE NAME OF YOUR DATASET]"@en ;
-    dcterms:description "[ELABORATED DESCRIPTION OF THE DATASET]"@en ;
-    dcterms:issued "[DATE OF INITIAL SUBMISSION, YYYY-MM-DD]"^^xsd:date ;
+    dcterms:title "LinkedSpending"@en ;
+    dcterms:description "This is a subset of the LinkedSpending dataset (LS package 2013-9), which contains government spending information from around the world. The dataset uses the [RDF Data Cube vocabulary](https://www.w3.org/TR/vocab-data-cube/). Only the spending observations were kept in this subset, extra contextual information was discarded. See the [website](http://linkedspending.aksw.org/) and the [paper](https://www.semantic-web-journal.net/system/files/swj923.pdf) for more details."@en ;
+    dcterms:issued "2023-05-01"^^xsd:date ;
 
     # License and attribution
-    # SPDX license list: https://spdx.org/licenses/
-    dcterms:license <SPDX-LICENSE-URL> ;
-    # Feel free to add more creators or use any FOAF properties here
+    dcterms:license <https://spdx.org/licenses/PDDL-1.0> ;
     dcterms:creator [
-        foaf:name "[YOUR NAME]" ;
-        foaf:nick "[YOUR NICK]" ;
-        foaf:homepage <LINK-TO-YOUR-PAGE>
+        foaf:name "Konrad Höffner" ;
+        foaf:homepage <https://www.imise.uni-leipzig.de/Mitarbeiter/Konrad_Hoeffner> ;
+        rdfs:comment "Creator and maintainer of the LinkedSpending dataset."@en ;
+    ] , [
+        foaf:name "AKSW team" ;
+        foaf:homepage <http://aksw.org/Team> ;
+    ] , [
+        foaf:name "Piotr Sowiński" ;
+        foaf:nick "Ostrzyciel" ;
+        rdfs:comment "Processing the dataset" ;
+        foaf:homepage <https://github.com/Ostrzyciel>, <https://orcid.org/0000-0002-2543-9461> ;
     ] ;
     
     # Themes
-    # Full list of themes: https://w3id.org/riverbench/schema/theme.ttl
-    dcat:theme <ADD-AT-LEAST-ONE-THEME> ;
+    dcat:theme rbt:statistical, rbt:government, rbt:temporal ;
 
     # Technical metadata
-    # URIs of the ontologies used in the dataset
-    rb:usesOntology <ADD-ONTOLOGY-URIS> ;
-    # Set to number of stream elements in the dataset
-    rb:hasStreamElementCount -1 ;
-    # One of: rb:triples, rb:quads, rb:graphs
-    rb:hasStreamElementType <STREAM-ELEMENT-TYPE> ;
+    rb:usesOntology 
+        <http://linkedspending.aksw.org/ontology> , 
+        <http://dbpedia.org/ontology> ,
+        <http://purl.org/linked-data/sdmx/2009/attribute> ,
+        <http://purl.org/linked-data/cube>
+    ;
+    rb:hasStreamElementCount 2477552 ;
+    rb:hasStreamElementType rb:triples ;
     rb:hasStreamElementSplit [
-        # At least one of: rb:StatementCountStreamElementSplit,
-        #   rb:TimeStreamElementSplit, rb:TopicStreamElementSplit
-        a <SPLIT-TYPE> ;
-        rdfs:comment "[FURTHER EXPLANATION ON THE SPLIT]"@en
+        a rb:TopicStreamElementSplit ;
+        rdfs:comment "Each stream element corresponds to one observation in the dataset."@en
     ] ;
-    rb:conformsToRdf11 "" ; # true or false
-    rb:conformsToRdfStarDraft_20211217 "" ; # true or false
-    rb:usesGeneralizedRdfDatasets "" ; # true or false
-    rb:usesGeneralizedTriples "" ; # true or false
-    rb:usesRdfStar "" ; # true or false
-    
-    # Add any additional metadata here (e.g., temporal resolution)
+    rb:conformsToRdf11 true ;
+    rb:conformsToRdfStarDraft_20211217 true ;
+    rb:usesGeneralizedRdfDatasets false ;
+    rb:usesGeneralizedTriples false ;
+    rb:usesRdfStar false ;
 .
