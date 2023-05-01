@@ -25,9 +25,9 @@ Full documentation for all versions can be found [on the website](https://w3id.o
 - **<abbr title="An unambiguous reference to the resource within a given context.">Identifier</abbr>**: linked-spending
 - **<abbr title="Version tag of an artifact">Has version</abbr>**: dev
 - **<abbr title="A main category of the resource. A resource can have multiple themes.">Theme</abbr>**: 
+    - <abbr title="Datasets with information on governments or produced by governments.">Government</abbr> ([rbt:government](https://w3id.org/riverbench/schema/theme#government))
     - <abbr title="Datasets with statistical information.">Statistical</abbr> ([rbt:statistical](https://w3id.org/riverbench/schema/theme#statistical))
     - <abbr title="Datasets with temporal information.">Temporal</abbr> ([rbt:temporal](https://w3id.org/riverbench/schema/theme#temporal))
-    - [https://w3id.org/riverbench/schema/theme#government](https://w3id.org/riverbench/schema/theme#government)
 - **<abbr title="An entity responsible for making the resource.">Creator</abbr>**: 
     - **AKSW team (1)**    
         - **<abbr title="A name for some thing.">Name</abbr>**: AKSW team
