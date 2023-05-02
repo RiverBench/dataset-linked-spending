@@ -3,6 +3,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rb: <https://w3id.org/riverbench/schema/metadata#> .
+@prefix rbdoc: <https://w3id.org/riverbench/schema/documentation#> .
 @prefix rbt: <https://w3id.org/riverbench/schema/theme#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
@@ -27,14 +28,17 @@
         foaf:name "Konrad Höffner" ;
         foaf:homepage <https://www.imise.uni-leipzig.de/Mitarbeiter/Konrad_Hoeffner> ;
         rdfs:comment "Creator and maintainer of the LinkedSpending dataset."@en ;
+        rbdoc:hasDocWeight 1 ;
     ] , [
         foaf:name "AKSW team" ;
         foaf:homepage <http://aksw.org/Team> ;
+        rbdoc:hasDocWeight 2 ;
     ] , [
         foaf:name "Piotr Sowiński" ;
         foaf:nick "Ostrzyciel" ;
         rdfs:comment "Processing the dataset" ;
         foaf:homepage <https://github.com/Ostrzyciel>, <https://orcid.org/0000-0002-2543-9461> ;
+        rbdoc:hasDocWeight 3 ;
     ] ;
     
     # Themes
