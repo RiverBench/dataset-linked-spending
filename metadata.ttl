@@ -60,7 +60,7 @@
     rb:hasStreamElementCount 2477552 ;
     stax:hasStreamTypeUsage [
         a stax:RdfStreamTypeUsage ;
-        rdfs:comment "The dataset can be viewed as a stream of graphs corresponding to statistical observations. Each graph is uniquely identified by its subject IRI."@en ;
+        rdfs:comment "The dataset can be viewed as a stream of graphs corresponding to statistical observations or other subjects (e.g., statistical properties). Each graph is uniquely identified by its subject IRI."@en ;
         stax:hasStreamType stax:subjectGraphStream
     ] , [
         a stax:RdfStreamTypeUsage ;
@@ -69,9 +69,11 @@
     ] ;
     rb:hasStreamElementSplit [
         a rb:TopicStreamElementSplit ;
-        rdfs:comment "Each stream element corresponds to one observation in the dataset."@en ;
+        rdfs:comment "Each stream element corresponds to one subject (usually an observation)."@en ;
         rb:hasSubjectShape [
             sh:targetClass <http://purl.org/linked-data/cube#Observation>
+        ] , [
+            sh:targetClass <http://purl.org/linked-data/cube#DataStructureDefinition>
         ] , [
             rdfs:comment "Some elements introduce properties instead of observations"@en ;
             sh:targetClass <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
