@@ -6,7 +6,9 @@
 @prefix rbdoc: <https://w3id.org/riverbench/schema/documentation#> .
 @prefix rbt: <https://w3id.org/riverbench/schema/theme#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix stax: <https://w3id.org/stax/ontology#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 # This file contains the manually written metadata for the dataset.
@@ -56,10 +58,21 @@
         <http://purl.org/linked-data/cube>
     ;
     rb:hasStreamElementCount 2477552 ;
-    rb:hasStreamElementType rb:triples ;
+    stax:hasStreamTypeUsage [
+        a stax:RdfStreamTypeUsage ;
+        rdfs:comment "The dataset can be viewed as a stream of graphs corresponding to statistical observations. Each graph is uniquely identified by its subject IRI."@en ;
+        stax:hasStreamType stax:subjectGraphStream
+    ] , [
+        a stax:RdfStreamTypeUsage ;
+        rdfs:comment "The dataset can be viewed as a flattened stream of triples."@en ;
+        stax:hasStreamType stax:flatTripleStream
+    ] ;
     rb:hasStreamElementSplit [
         a rb:TopicStreamElementSplit ;
-        rdfs:comment "Each stream element corresponds to one observation in the dataset."@en
+        rdfs:comment "Each stream element corresponds to one observation in the dataset."@en ;
+        rb:hasSubjectShape [
+            sh:targetClass <http://purl.org/linked-data/cube#Observation>
+        ] ;
     ] ;
     rb:conformsToRdf11 true ;
     rb:conformsToRdfStarDraft_20211217 true ;
