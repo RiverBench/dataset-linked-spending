@@ -72,6 +72,9 @@
         rdfs:comment "Each stream element corresponds to one observation in the dataset."@en ;
         rb:hasSubjectShape [
             sh:targetClass <http://purl.org/linked-data/cube#Observation>
+        ] , [
+            rdfs:comment "Some elements introduce properties instead of observations"@en ;
+            sh:targetClass <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
         ] ;
     ] ;
     rb:conformsToRdf11 true ;
