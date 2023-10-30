@@ -71,12 +71,8 @@
         a rb:TopicStreamElementSplit ;
         rdfs:comment "Each stream element corresponds to one subject (usually an observation)."@en ;
         rb:hasSubjectShape [
-            sh:targetClass <http://purl.org/linked-data/cube#Observation>
-        ] , [
-            sh:targetClass <http://purl.org/linked-data/cube#DataStructureDefinition>
-        ] , [
-            rdfs:comment "Some elements introduce properties instead of observations"@en ;
-            sh:targetClass <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>
+            rdfs:comment "Target instances of any class."@en ;
+            sh:targetSubjectsOf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
         ] ;
     ] ;
     rb:conformsToRdf11 true ;
