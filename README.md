@@ -49,7 +49,7 @@ Full documentation for all versions can be found [on the website](https://w3id.o
     - [http://linkedspending.aksw.org/](http://linkedspending.aksw.org/)
     - [https://doi.org/10.3233/SW-150172](https://doi.org/10.3233/SW-150172)
 - **<abbr title="Date of formal issuance of the resource.">Date Issued</abbr>**: 2023-05-01
-- **<abbr title="Date on which the resource was changed.">Date Modified</abbr>**: 2024-08-28
+- **<abbr title="Date on which the resource was changed.">Date Modified</abbr>**: 2024-08-29
 - **<abbr title="A Web page that can be navigated to in a Web browser to gain access to the catalog, a dataset, its distributions and/or additional information.">Landing page</abbr>**: [linked-spending (dev)](https://w3id.org/riverbench/datasets/linked-spending/dev)
 - **<abbr title="An established standard to which the described resource conforms.">Conforms To</abbr>**: Metadata ([https://w3id.org/riverbench/schema/metadata](https://w3id.org/riverbench/schema/metadata))
 
